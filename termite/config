@@ -1,0 +1,10 @@
+[options]
+font = Anomaly Mono 16
+bold_is_bright = 1
+cursor_shape = underline
+
+[colors]
+foreground = #ffffff
+background = rgba(0, 0, 0, 0.8)
+
+color12 = #8888ff

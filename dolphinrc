@@ -1,0 +1,39 @@
+Height 1920=920
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAEoAAADb/wCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAIA////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAApAAADbwAAAHIA////AAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAAAgD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAA/////wAAAAIA////AAAC5AAAA28AAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+Width 1080=1042
+
+[CompactMode]
+FontWeight=50
+
+[DetailsMode]
+FontWeight=50
+
+[General]
+Version=200
+ViewPropsTimestamp=2020,3,24,15,21,33
+
+[IconsMode]
+FontSize=7
+FontWeight=50
+UseSystemFont=false
+
+[KPropertiesDialog]
+Height 1920=646
+Width 1080=622
+
+[MainWindow]
+Height 1440=675
+Height 1920=1848
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAEoAAACevwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAIA////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAApAAACegAAAHIA////AAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAAAgD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAA/////wAAAAIA////AAAEtQAAAnoAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Width 1080=1038
+Width 2560=1507
+
+[PreviewSettings]
+Plugins=svgthumbnail,ebookthumbnail,audiothumbnail,comicbookthumbnail,directorythumbnail,kraorathumbnail,opendocumentthumbnail,windowsimagethumbnail,exrthumbnail,imagethumbnail,windowsexethumbnail,jpegthumbnail,appimagethumbnail,djvuthumbnail
+
+[SettingsDialog]
+Height 1920=560
+Width 1080=797

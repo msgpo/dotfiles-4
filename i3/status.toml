@@ -1,0 +1,62 @@
+theme = "slick"
+icons = "awesome"
+
+[[block]]
+block = "disk_space"
+path = "/home"
+alias = "/home"
+info_type = "available"
+unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+
+[[block]]
+block = "net"
+device = "wlp6s0"
+ssid = true
+signal_strength = true
+ip = true
+bitrate = true
+speed_up = false
+speed_down = false
+graph_up = false
+graph_down = false
+use_bits = false
+
+[[block]]
+block = "net"
+device = "tun0"
+hide_missing = true
+speed_up = false
+speed_down = false
+
+[[block]]
+block = "pacman"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{Mup}%"
+format_swap = "{SUp}%"
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "load"
+interval = 1
+format = "{1m}"
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "weather"
+service = { name = "openweathermap", api_key = "c4473371665ef9dcc53c9047f8539568", city_id = "5574991", units = "imperial" }
+
+[[block]]
+block = "time"
+interval = 1
+format = "%a %B %d %H:%M:%S"
