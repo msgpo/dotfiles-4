@@ -48,7 +48,11 @@ floating_modifier $mod
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
+
+# start rofi (launcher/window selector)
+bindsym $mod+d exec rofi -show run -theme fancy -font "Anomaly Mono 16" -terminal termite
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -117,6 +121,10 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+# add cycling keys
+bindsym Control+1 workspace prev
+bindsym Control+2 workspace next
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -156,16 +164,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym l resize shrink height 5 px or 5 ppt
+        bindsym semicolon resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -181,8 +189,11 @@ bar {
         ### DEFAULT
         #status_command i3status -c ~/.i3status.conf
 
-        ### Bumblebee
-        status_command bumblebee-status -m xkcd kernel pacman nic cpu memory pasink weather date time system -p time.format="%H:%M:%S" -p date.left-click="gsimplecal" date.format="%a, %b %d %Y" nic.exclude="lo,enp0s31f6" nic.format="{ssid} {ip}" weather.apikey="c4473371665ef9dcc53c9047f8539568" weather.location="5574999" weather.unit="imperial" -t iceberg-dark-powerline
+        ### Bumblebee (AM/PM)
+        status_command bumblebee-status -m xkcd kernel pacman nic cpu memory pasink weather date time system -p time.format="%I:%M:%S %p" -p date.left-click="gsimplecal" date.format="%a, %b %d %Y" nic.exclude="lo,enp0s31f6" nic.format="{ssid} {ip}" weather.apikey="c4473371665ef9dcc53c9047f8539568" weather.showminmax="True" weather.location="5574999" weather.unit="imperial" pacman.sum="True" -t iceberg-dark-powerline
+
+        ### Bumblebee (24 hour time)
+        #status_command bumblebee-status -m xkcd kernel pacman nic cpu memory pasink weather date time system -p time.format="%H:%M:%S" -p date.left-click="gsimplecal" date.format="%a, %b %d %Y" nic.exclude="lo,enp0s31f6" nic.format="{ssid} {ip}" weather.apikey="c4473371665ef9dcc53c9047f8539568" weather.showminmax="True" weather.location="5574999" weather.unit="imperial" pacman.sum="True" -t iceberg-dark-powerline
 
         ### Polybar
         #status_command $HOME/.config/polybar/launch.sh
@@ -206,7 +217,7 @@ bar {
 bindsym $mod+Return exec termite
 
 gaps inner 5
-gaps outer 5
+gaps outer 0
 
 exec --no-startup-id compton --blur-background --blur-method kawase --blur-strength 7 --backend glx
 exec --no-startup-id nitrogen --restore
